@@ -1,0 +1,71 @@
+
+h1{
+    text-align: center;}
+div{
+    width: 301px;
+    height: 301px;
+    margin: 5px;
+    cursor: pointer;
+
+
+}
+.zielony{
+    background-color: green;
+    width: 50%;
+    height: 50%;
+    color: black;
+    text-align: center;
+    margin: 0px;
+    float: left;
+    line-height:150px;
+    transition: 0s;
+
+}
+.zielony:hover{
+    background-color: chartreuse;
+}
+
+.czerwony{
+    background-color: red;
+    width: 50%;
+    height: 50%;
+    color: black;
+    text-align: center;
+    margin-top: 0px;
+    margin: 0px;
+    float: right;
+    line-height: 150px;
+    transition: 0s;
+}
+.czerwony:hover{
+    background-color: crimson;
+}
+.niebieski{
+    background-color: blue;
+    width: 50%;
+    height: 50%;
+    color: white;
+    margin: 0px;
+    text-align: center;    
+    float: right;
+    line-height: 150px;
+    transition: 0s;    
+}
+.niebieski:hover{
+    background-color: darkblue;
+}
+
+.czarny{
+    background-color: black;
+    width: 50%;
+    height: 50%;
+    color:white ;
+    text-align: center;
+    margin: 0px;
+    float: left;
+    line-height:150px;
+    transition: 0s;
+}
+.czarny:hover{
+    background-color: brown;
+}
