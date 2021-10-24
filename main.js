@@ -1,43 +1,47 @@
-const menu1 = "stolik zielony zamowil : " + "frytki,chesseburger,cola";
-const order1 = function () {
-    const ul = document.createElement('ul');
-    ul.textContent = menu1;
-    document.body.appendChild(ul);
-    console.log("ok1")
-};
-const divZielony = document.querySelector("div.zielony")
-divZielony.addEventListener("click", order1);
-
-const menu2 = "stolik czerwony zamowil : " + "frytki,chesseburger,cola";
-const order2 = function () {
-    const ul = document.createElement('ul');
-    ul.textContent = menu2;
-    document.body.appendChild(ul);
-    console.log("ok2")
-};
-const divCzerwony = document.querySelector("div.czerwony")
-divCzerwony.addEventListener("click", order2);
-
-const menu3 = "stolik czarny zamowil : " + "frytki,chesseburger,cola";
-const order3 = function () {
-    const ul = document.createElement('ul');
-    ul.textContent = menu3;
-    document.body.appendChild(ul);
-    console.log("ok3")
-};
-const divCzarny = document.querySelector("div.czarny")
-divCzarny.addEventListener("click", order3);
-
-const menu4 = "stolik Niebieski zamowil : " + "frytki,chesseburger,cola";
-const order4 = function () {
-    const ul = document.createElement('ul');
-    ul.textContent = menu4;
-    document.body.appendChild(ul);
-    console.log("ok4")
-};
-const divNiebieski = document.querySelector("div.niebieski")
-divNiebieski.addEventListener("click", order4);
+let json1 = '{"result":"tableA", "count":"obiadA"}';
+let json2 = '{"result":"tableB", "count":"obiadB"}';
+let json3 = '{"result":"tableB", "count":"obiadB"}';
+let json4 = '{"result":"tableB", "count":"obiadB"}';
+let obj1 = JSON.parse(json1);
+let obj2 = JSON.parse(json2);
+let obj3 = JSON.parse(json3);
+let obj4 = JSON.parse(json4);
+console.log(obj1.count);
+console.log(obj1.result);
+console.log(obj2.count);
+console.log(obj2.result);
+console.log(obj3.count);
+console.log(obj3.result);
+console.log(obj4.count);
+console.log(obj4.result);
+let divNumber = 0;
+let addTableNumber = 0;
+let btn = document.querySelector("button")
+let addTable = function () {
 
 
+    let div = document.createElement("div")
+    document.body.appendChild(div)
+    div.innerHTML = "<button>Cofnij</button>" + "<button>Table</button>";
+    const Cofnij = (e) => {
 
+
+    }
+    button.addEventListener("click", showMenu);
+    let showMenu = function () {
+        button.innerHTML = "obj1.count";
+
+    }
+    if (addTableNumber == 1) {
+        let div = document.createElement("div")
+        document.body.appendChild(div)
+        addTableNumber++;
+    }
+    else
+        return;
+
+}
+
+
+btn.addEventListener("click", addTable);
 

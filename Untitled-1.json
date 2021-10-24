@@ -1,0 +1,14 @@
+{
+    "tables": [
+        "tableA",
+        "tableB",
+        "tableC",
+        "tableD"
+    ],
+    "menu": [
+        "obiadA",
+        "obiadB",
+        "obiadC",
+        "obiadD"
+    ]
+}

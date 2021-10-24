@@ -1,71 +1,73 @@
-
 h1{
     text-align: center;}
+
+    div.restaurant{
+        width: 301px;
+        height: 301px;
+        margin: 69px;
+        float: left;
+        
+    }
+
+
 div{
+    background-color: green;
     width: 301px;
     height: 301px;
-    margin: 5px;
-    cursor: pointer;
-
-
-}
-.zielony{
-    background-color: green;
-    width: 50%;
-    height: 50%;
     color: black;
     text-align: center;
-    margin: 0px;
-    float: left;
+    margin: 69px;
+    float: right;
     line-height:150px;
     transition: 0s;
 
+
 }
-.zielony:hover{
+.a:hover{
     background-color: chartreuse;
 }
 
-.czerwony{
+.B{
     background-color: red;
-    width: 50%;
-    height: 50%;
+    width: 50px;
+    height: 50px;
     color: black;
     text-align: center;
     margin-top: 0px;
     margin: 0px;
     float: right;
-    line-height: 150px;
-    transition: 0s;
+ 
 }
-.czerwony:hover{
+.B:hover{
     background-color: crimson;
 }
-.niebieski{
+.C{
     background-color: blue;
-    width: 50%;
-    height: 50%;
+    width: 50px;
+    height: 50px;
     color: white;
     margin: 0px;
     text-align: center;    
     float: right;
-    line-height: 150px;
-    transition: 0s;    
+     
 }
-.niebieski:hover{
+.C:hover{
     background-color: darkblue;
 }
 
-.czarny{
+.D{
     background-color: black;
-    width: 50%;
-    height: 50%;
+    width: 50px;
+    height: 50px;
     color:white ;
     text-align: center;
     margin: 0px;
     float: left;
-    line-height:150px;
-    transition: 0s;
+  
 }
-.czarny:hover{
+.D:hover{
     background-color: brown;
+}
+button{
+   float: right;
 }
