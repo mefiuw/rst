@@ -20,39 +20,43 @@ console.log(obj3.count);
 console.log(obj3.result);
 console.log(obj4.count);
 console.log(obj4.result);
-let button = "<button>Table</button>";
+let table = document.querySelector('table')
+const cofnij = document.querySelector('cofnij')
 let divNumber = 0;
 let addTableNumber = 0;
-let btn = document.querySelector("button")
-let addTable = function () {
+let btn = document.querySelector('button.addTable')
 
+let remover = () => {
+    console.log("cofnij");
+    cofnij.addEventListener("click", remover);
+}
+let addTable = () => {
 
-    let div = document.createElement("div")
+    console.log("ok")
+    let div = document.createElement("div");
     document.body.appendChild(div)
-    div.innerHTML = "<button>Cofnij</button>" + "<button>Table</button>";
+    div.innerHTML = '<button class="cofnij">cofnij</button>' + '<button class="table">table</button>';
 
-
-
-    button.addEventListener("click", showMenu);
-    let showMenu = function () {
-        button.innerHTML = "<p>obj1.count</p>";
-        btn.addEventListener("click", addTable);
+    let showMenu = () => {
+        console.log("ok")
+        table.innerHTML = (obj1.count);
+        table.addEventListener("click", showMenu);
     }
-}    const Cofnij = (e) => {
 
 
 }
-button.addEventListener("click", showMenu);
-let showMenu = function () {
-    button.innerHTML = "obj1.count";
 
-}
+btn.addEventListener("click", addTable);
+
+
+
+
 if (addTableNumber == 1) {
     let div = document.createElement("div")
     document.body.appendChild(div)
     addTableNumber++;
 }
 else
-    return;
+    addTableNumber = 0;
 
-}
+
