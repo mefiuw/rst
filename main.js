@@ -1,3 +1,9 @@
+
+
+
+
+
+
 let json1 = '{"result":"tableA", "count":"obiadA"}';
 let json2 = '{"result":"tableB", "count":"obiadB"}';
 let json3 = '{"result":"tableB", "count":"obiadB"}';
@@ -14,6 +20,7 @@ console.log(obj3.count);
 console.log(obj3.result);
 console.log(obj4.count);
 console.log(obj4.result);
+let button = "<button>Table</button>";
 let divNumber = 0;
 let addTableNumber = 0;
 let btn = document.querySelector("button")
@@ -23,25 +30,29 @@ let addTable = function () {
     let div = document.createElement("div")
     document.body.appendChild(div)
     div.innerHTML = "<button>Cofnij</button>" + "<button>Table</button>";
-    const Cofnij = (e) => {
 
 
-    }
+
     button.addEventListener("click", showMenu);
     let showMenu = function () {
-        button.innerHTML = "obj1.count";
+        button.innerHTML = "<p>obj1.count</p>";
+        btn.addEventListener("click", addTable);
+    }
+}    const Cofnij = (e) => {
 
-    }
-    if (addTableNumber == 1) {
-        let div = document.createElement("div")
-        document.body.appendChild(div)
-        addTableNumber++;
-    }
-    else
-        return;
 
 }
+button.addEventListener("click", showMenu);
+let showMenu = function () {
+    button.innerHTML = "obj1.count";
 
+}
+if (addTableNumber == 1) {
+    let div = document.createElement("div")
+    document.body.appendChild(div)
+    addTableNumber++;
+}
+else
+    return;
 
-btn.addEventListener("click", addTable);
-
+}
