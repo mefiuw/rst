@@ -18,7 +18,7 @@ console.log(item)
 
 
 
-
+let number = 0;
 let restauracja = document.querySelector('#root')
 let btn = document.querySelector('#addTable')
 
@@ -40,12 +40,16 @@ let addTable = () => {
     tekst.innerHTML = ""
 
     let showMenu = () => {
-        let item = items[Math.floor(Math.random() * items.length)];
-        tekst.innerHTML = item.count
+        if (number == 0) {
+            let item = items[Math.floor(Math.random() * items.length)];
+            tekst.innerHTML = item.count
+        }
+        number++;
 
     }
     let hideMenu = () => {
         tekst.innerHTML = ""
+        number = 0;
 
     }
     div1.addEventListener("click", hideMenu);
