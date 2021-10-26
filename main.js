@@ -1,9 +1,4 @@
 
-
-
-
-
-
 let json1 = '{"result":"tableA", "count":"obiadA"}';
 let json2 = '{"result":"tableB", "count":"obiadB"}';
 let json3 = '{"result":"tableB", "count":"obiadB"}';
@@ -20,43 +15,43 @@ console.log(obj3.count);
 console.log(obj3.result);
 console.log(obj4.count);
 console.log(obj4.result);
-let table = document.querySelector('table')
-const cofnij = document.querySelector('cofnij')
-let divNumber = 0;
-let addTableNumber = 0;
-let btn = document.querySelector('button.addTable')
 
-let remover = () => {
-    console.log("cofnij");
-    cofnij.addEventListener("click", remover);
-}
+
+
+
+
+
+let restauracja = document.querySelector('#root')
+let btn = document.querySelector('#addTable')
+
+
 let addTable = () => {
 
-    console.log("ok")
     let div = document.createElement("div");
-    document.body.appendChild(div)
-    div.innerHTML = '<button class="cofnij">cofnij</button>' + '<button class="table">table</button>';
+    restauracja.appendChild(div)
+
+    let div1 = document.createElement("button")
+    div1.innerHTML = "Hide";
+    div.appendChild(div1)
+
+    let div2 = document.createElement("button")
+    div.appendChild(div2)
+    div2.innerHTML = "Show ";
+    let tekst = document.createElement("span")
+    div.appendChild(tekst)
+    tekst.innerHTML = ""
 
     let showMenu = () => {
-        console.log("ok")
-        table.innerHTML = (obj1.count);
-        table.addEventListener("click", showMenu);
+        tekst.innerHTML = "zamowienie"
+
     }
+    let hideMenu = () => {
+        tekst.innerHTML = ""
 
-
+    }
+    div1.addEventListener("click", hideMenu);
+    div2.addEventListener("click", showMenu);
 }
 
 btn.addEventListener("click", addTable);
-
-
-
-
-if (addTableNumber == 1) {
-    let div = document.createElement("div")
-    document.body.appendChild(div)
-    addTableNumber++;
-}
-else
-    addTableNumber = 0;
-
 
