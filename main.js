@@ -1,21 +1,19 @@
 
-let json1 = '{"result":"tableA", "count":"obiadA"}';
-let json2 = '{"result":"tableB", "count":"obiadB"}';
-let json3 = '{"result":"tableB", "count":"obiadB"}';
-let json4 = '{"result":"tableB", "count":"obiadB"}';
-let obj1 = JSON.parse(json1);
-let obj2 = JSON.parse(json2);
-let obj3 = JSON.parse(json3);
-let obj4 = JSON.parse(json4);
-console.log(obj1.count);
-console.log(obj1.result);
-console.log(obj2.count);
-console.log(obj2.result);
-console.log(obj3.count);
-console.log(obj3.result);
-console.log(obj4.count);
-console.log(obj4.result);
+const items = [
+    { result: 'tableA', count: 'obiadA' },
+    { result: 'tableB', count: 'obiadB' },
+    { result: 'tableC', count: 'obiadC' },
+    { result: 'tableD', count: 'obiadD' },
+    { result: 'tableE', count: 'obiadE' },
+    { result: 'tableF', count: 'obiadF' }
 
+]
+const itemsMeat = items.map((item) => {
+    return item.count
+})
+console.log(itemsMeat)
+let item = items[Math.floor(Math.random() * items.length)];
+console.log(item)
 
 
 
@@ -42,7 +40,8 @@ let addTable = () => {
     tekst.innerHTML = ""
 
     let showMenu = () => {
-        tekst.innerHTML = "zamowienie"
+        let item = items[Math.floor(Math.random() * items.length)];
+        tekst.innerHTML = item.count
 
     }
     let hideMenu = () => {
