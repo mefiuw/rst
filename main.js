@@ -34,7 +34,7 @@ let addTable = () => {
             if (number <= 1) {
                 let item = items[Math.floor(Math.random() * items.length)];
                 tekst.innerHTML = item.count
-
+                number++;
             }
 
         }
