@@ -4,7 +4,6 @@ let items = {
     C: { order: ["sałatka C", "Zupa C", "Deser C"] },
     D: { order: ["sałatka D", "Zupa D", "Deser D"] },
 }
-let a = [1, 2, 3, 4];
 let i = 1;
 let number = 1;
 let number1 = 1;
