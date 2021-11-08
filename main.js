@@ -22,8 +22,8 @@ let addTable = () => {
     if (i <= 4) {
         if (a > 4) {
             alert('osiągnieto max ilosc stolikow')
-            a = 4;
-            i = 4;
+            a = 5;
+            i = 5;
             return;
         }
         let div = document.createElement("div")
@@ -112,7 +112,7 @@ let addTable = () => {
 
 }
 btn.addEventListener("click", addTable);
-a = i;
+
 
 
 
