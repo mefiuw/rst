@@ -32,11 +32,14 @@ div#root{
 
 }
 button#addTable{
+    
+    display: block;
     width: 90px;
     height: 90px;
    float: right;
    background-color: black;
     color: white;
+    cursor: pointer;
 }
 button{
     background-color: black;
@@ -44,4 +47,5 @@ button{
     width: 60px;
     height: 60px;
    float: right;
+   cursor: pointer;
 }
