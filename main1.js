@@ -8,7 +8,7 @@ const tables = {
 const btn = document.querySelector('#addTable');
 let room = [];
 let tablee=[];
-let i=0
+let i;
 
 
 for(i in tables){
@@ -61,7 +61,7 @@ const init = () => {
     }
     const showMenubtn = (event) => {
       
-        event.target.parentNode.childNodes[2].innerHTML =`Zamówienie : ${tablee[i]}`
+        event.target.parentNode.childNodes[2].innerHTML =`Zamówienie : ${[tablee]}`
         
     }
 
