@@ -1,51 +1,55 @@
-h1{
-    text-align: center;}
-span{
-    width:190px;
-    height: 140px;
-    color: black;
-    float: left;
-    margin-top: 140px;
-    margin-left: 20px;
+h1 {
+  text-align: center;
+}
+span {
+  width: 190px;
+  height: 70px;
+  color: black;
+  float: left;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+p {
+  box-sizing: border-box;
 }
 
-div{
-        background-color: white;
-        width: 280px;
-        height: 280px;
-        margin: 1px;
-       float: left;
-        color: black;
-        
- }
-
-
-div#root{
-    background-color: purple;
-    width: 701px;
-    height: 701px;
-    color: white;
-    text-align: center;
-    margin: 69px;
-    margin-left:500px;
-
-
+div {
+  background-color: white;
+  width: 280px;
+  height: 280px;
+  margin: 1px;
+  float: left;
+  color: black;
 }
-button#addTable{
-    
-    display: block;
-    width: 90px;
-    height: 90px;
-   float: right;
-   background-color: black;
-    color: white;
-    cursor: pointer;
+
+div#root {
+  background-color: rgb(72, 90, 172);
+  width: 701px;
+  height: 701px;
+  color: white;
+  text-align: center;
+  margin: 69px;
+  margin-left: 200px;
+  box-sizing: border-box;
 }
-button{
-    background-color: black;
-    color: white;
-    width: 60px;
-    height: 60px;
-   float: right;
-   cursor: pointer;
+button#addTable {
+  display: block;
+  width: 90px;
+  height: 90px;
+  float: right;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+button#addTable:hover {
+  background-color: white;
+  color: black;
+}
+button {
+  background-color: black;
+  color: white;
+  width: 60px;
+  height: 60px;
+  float: right;
+  cursor: pointer;
 }
