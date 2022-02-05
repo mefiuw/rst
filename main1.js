@@ -33,7 +33,7 @@ const init = () => {
         div.appendChild(close)
         const tabl =Object.keys(tables);
 for(let i=0; i<tabl.length;i++){
-       let temp = tabl[i]
+       let temp = tabl[i];
    let tempArr = tables[temp].order
    for(let j=0;j<tempArr.length;j++){
        let p=document.createElement('p');
