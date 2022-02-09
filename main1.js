@@ -37,7 +37,7 @@ for(let i=0; i<tabl.length;i++){
    let tempArr = tables[temp].order
    for(let j=0;j<tempArr.length;j++){
        let p=document.createElement('p');
-       p.innerText =tempArr[j]
+       p.innerText =tempArr[j];
         tableOrder.appendChild(p)
    }
    document.getElementById('root').appendChild(div);
