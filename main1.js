@@ -1,47 +1,56 @@
 const tables = {
-    A: { order: ["sałatka A", "Zupa A", "Deser A"] },
-    B: { order: ["sałatka B", "Zupa B", "Deser B"] },
-    C: { order: ["sałatka C", "Zupa C", "Deser C"] },
-    D: { order: ["sałatka D", "Zupa D", "Deser D"] },
-    // klucz : wartosc
+    A: { order: ["Sałatka A", "Zupa A", "Deser A"] },
+    B: { order: ["Sałatka B", "Zupa B", "Deser B"] },
+    C: { order: ["Sałatka C", "Zupa C", "Deser C"] },
+    D: { order: ["Sałatka D", "Zupa D", "Deser D"] },
+   
 }
+
+
 const btn = document.querySelector('#addTable');
 let room = [];
 const init = () => {
-  //tablica zawierajaca info o aktualnych stolikach w pokoju
+   
     const createDiv = (tableName, rootDiv) => {
-        //nazwy zmiennych takie jakie maja zadanie
-        // refactor kodu, te same czynnosci wywal do fn
+        
+
         let div = document.createElement("div")
         div.setAttribute("id", tableName);
         rootDiv.appendChild(div);
-        let hideBtn = document.createElement("button")
-        hideBtn.setAttribute("id", `${tableName}-hideBtn`)
-        hideBtn.innerHTML = "Hide";
+
+        const hideBtn=createButton( `${tableName}-hideBtn`,"Hide")
         div.appendChild(hideBtn)
-        let showBtn = document.createElement("button")
-        showBtn.setAttribute("id", `${tableName}-showBtn`)
-        showBtn.innerHTML = "Show ";
+
+        const showBtn=createButton( `${tableName}-showBtn`,"Show")
         div.appendChild(showBtn)
+        
+        const closeBtn=createButton( `${tableName}-closeBtn`,"Close")
+        div.appendChild(closeBtn)
+        
+        
         let tableOrder = document.createElement("span")
+        tableOrder.style.display="none"
         tableOrder.setAttribute("id", `${tableName}-tableOrder`)
+        
         tableOrder.innerHTML =""
         div.appendChild(tableOrder)
-        let close = document.createElement("button")
-        close.setAttribute("id", `${tableName}-closeBtn`)
-        close.innerHTML = "Close";
-        div.appendChild(close)
-        const tabl =Object.keys(tables);
-for(let i=0; i<tabl.length;i++){
-       let temp = tabl[i];
-   let tempArr = tables[temp].order
-   for(let j=0;j<tempArr.length;j++){
+        
+       
+        const id_table=tableName.slice(-1)
+        const singleTableArray =tables[id_table].order
+    
+   for(let j=0;j<singleTableArray.length;j++){
        let p=document.createElement('p');
-       p.innerText =tempArr[j];
+       p.innerText =singleTableArray[j];
         tableOrder.appendChild(p)
    }
    document.getElementById('root').appendChild(div);
 }
+    const createButton=(id,text)=>{
+let button=document.createElement("button")
+button.setAttribute("id",id)
+button.innerHTML=text;
+return button;
     }
     const addEventListener = (tableName, fn) => {
         const diV = document.getElementById(tableName);
@@ -52,23 +61,23 @@ for(let i=0; i<tabl.length;i++){
          
         createDiv(tableID, rootDiv, orderName);
         addEventListener(`${tableID}-closeBtn`, closeMenubtn)
-        addEventListener(`${tableID}-showBtn`, showMenubtn)
-        addEventListener(`${tableID}-hideBtn`, hideMenubtn)
+        addEventListener(`${tableID}-showBtn`,()=>{showMenubtn(tableID+"-tableOrder")} )
+        addEventListener(`${tableID}-hideBtn`,()=>{ hideMenubtn(tableID+"-tableOrder")})
         
     }
-    const showMenubtn = (event) => { 
-        event.target.parentNode.childNodes[2].innerHTML =tempArr[j]
+    const showMenubtn = (param) => { 
+        document.getElementById(param).style.display="block";
     }
-    const hideMenubtn = (event) => {
-        event.target.parentNode.childNodes[2].innerHTML = ""
+    const hideMenubtn = (param) => {
+        
+        document.getElementById(param).style.display="none";
     }
     const closeMenubtn = (event) => {
         event.target.parentNode.parentNode.removeChild(event.target.parentNode);
         const tableName = event.target.id.split("-")[1]
        room = room.filter(table => (table != tableName));
     }
-    //iterujemy po wszystkich stolikach
-    // tableName - nazwa stolika, tableOrder - zamownienie, restauracja - div
+   
     for (table in tables) {
         if (room.indexOf(table) == -1) {
             addtable(table, tables[table], document.querySelector('#root'));

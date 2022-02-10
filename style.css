@@ -4,7 +4,7 @@ h1 {
 span {
   width: 190px;
   height: 70px;
-  color: black;
+  color: wheat;
   float: left;
   margin-top: 100px;
   margin-left: 20px;
@@ -14,29 +14,33 @@ p {
 }
 
 div {
-  background-color: white;
+  background-color: rgb(90, 6, 6);
   width: 280px;
   height: 280px;
   margin: 1px;
   float: left;
-  color: black;
+  color: wheat;
+  text-align: center;
+  margin-left: 15px;
 }
 
 div#root {
-  background-color: rgb(72, 90, 172);
-  width: 701px;
-  height: 701px;
+  background-color: rgb(0, 0, 90);
+
   color: white;
   text-align: center;
-  margin: 69px;
-  margin-left: 200px;
+  height: 50%;
   box-sizing: border-box;
+  width: 63%;
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-right: 200px;
 }
 button#addTable {
   display: block;
   width: 90px;
   height: 90px;
-  float: right;
+  float: left;
   background-color: black;
   color: white;
   cursor: pointer;
